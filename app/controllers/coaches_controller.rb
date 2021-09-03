@@ -9,6 +9,7 @@ class CoachesController < ApplicationController
 
   # GET /coaches/1 or /coaches/1.json
   def show
+    @schedule = @coach.schedules.build
   end
 
   # GET /coaches/new

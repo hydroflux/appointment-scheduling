@@ -12,3 +12,35 @@
 
 <%= link_to 'Edit', edit_coach_path(@coach) %> |
 <%= link_to 'Back', coaches_path %>
+
+<hr>
+
+<h1>Listing schedules</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Weekday</th>
+    <th>Start</th>
+    <th>End</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @coach.schedules.each do |schedule| %>
+  <% if schedule.persisted? %>
+    <tr>
+      <td><%= schedule.title %></td>
+      <td><%= schedule.weekday %></td>
+      <td><%= schedule.start %></td>
+      <td><%= schedule.end %></td>
+      <td><%= link_to 'Show', schedule_path(schedule.coach, schedule) %></td>
+      <td><%= link_to 'Edit', edit_schedule_path(schedule.coach, schedule) %></td>
+      <td><%= link_to 'Destroy', schedule_path(schedule.coach, schedule), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+<% end %>
+</table>
+
+<%= link_to 'New Schedule', new_schedule_path(coach_id: @coach) %>

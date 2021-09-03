@@ -1,3 +1,5 @@
+require 'pry'
+
 class SchedulesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_coach
@@ -10,6 +12,7 @@ class SchedulesController < ApplicationController
 
   # GET coaches/1/schedules/1
   def show
+    @schedule = @coach.schedules.build
   end
 
   # GET coaches/1/schedules/new

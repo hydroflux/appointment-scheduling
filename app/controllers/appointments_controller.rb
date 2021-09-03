@@ -5,7 +5,7 @@ class AppointmentsController < ApplicationController
 
   # GET schedules/1/appointments
   def index
-    @appointments = @schedule.appointments
+    @appointments = current_user.appointments
   end
 
   # GET schedules/1/appointments/1
@@ -14,7 +14,7 @@ class AppointmentsController < ApplicationController
 
   # GET schedules/1/appointments/new
   def new
-    @appointment = @schedule.appointments.build
+    @appointment = current_user.appointments.build
   end
 
   # GET schedules/1/appointments/1/edit
@@ -23,7 +23,7 @@ class AppointmentsController < ApplicationController
 
   # POST schedules/1/appointments
   def create
-    @appointment = @schedule.appointments.build(appointment_params)
+    @appointment = current_user.appointments.build(appointment_params)
 
     if @appointment.save
       redirect_to([@appointment.schedule, @appointment], notice: 'Appointment was successfully created.')
@@ -55,7 +55,7 @@ class AppointmentsController < ApplicationController
     end
 
     def set_appointment
-      @appointment = @schedule.appointments.find(params[:id])
+      @appointment = current_user.appointments.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
