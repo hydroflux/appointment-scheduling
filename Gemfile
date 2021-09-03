@@ -58,3 +58,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Scheduling Specific Gems
 gem "simple_calendar", "~> 2.4"
 gem 'nested_scaffold'
+gem "devise", "~> 4.8"

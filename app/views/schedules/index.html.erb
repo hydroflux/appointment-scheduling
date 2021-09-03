@@ -6,6 +6,7 @@
     <th>Weekday</th>
     <th>Start</th>
     <th>End</th>
+    <th>Coach</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,6 +18,7 @@
     <td><%= schedule.weekday %></td>
     <td><%= schedule.start %></td>
     <td><%= schedule.end %></td>
+    <td><%= schedule.coach %></td>
     <td><%= link_to 'Show', [schedule.coach, schedule] %></td>
     <td><%= link_to 'Edit', edit_coach_schedule_path(schedule.coach, schedule) %></td>
     <td><%= link_to 'Destroy', [schedule.coach, schedule], method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_03_001413) do
+ActiveRecord::Schema.define(version: 2021_09_03_003123) do
 
   create_table "appointments", force: :cascade do |t|
     t.string "title"
@@ -36,21 +36,14 @@ ActiveRecord::Schema.define(version: 2021_09_03_001413) do
   end
 
   create_table "schedules", force: :cascade do |t|
-    t.integer "coach_id", null: false
     t.string "title"
     t.string "weekday"
     t.datetime "start"
     t.datetime "end"
+    t.integer "coach_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["coach_id"], name: "index_schedules_on_coach_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "passphrase"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "appointments", "coaches"

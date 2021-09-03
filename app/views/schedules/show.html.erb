@@ -20,6 +20,11 @@
   <%= @schedule.end %>
 </p>
 
+<p>
+  <b>Coach:</b>
+  <%= @schedule.coach %>
+</p>
+
 
 <%= link_to 'Edit', edit_coach_schedule_path(@schedule.coach, @schedule) %> |
 <%= link_to 'Back', coach_schedules_path(@schedule.coach) %>

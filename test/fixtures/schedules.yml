@@ -1,15 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  coach: one
   title: MyString
   weekday: MyString
-  start: 2021-09-02 18:13:26
-  end: 2021-09-02 18:13:26
+  start: 2021-09-02 18:31:07
+  end: 2021-09-02 18:31:07
+  coach: one
 
 two:
-  coach: two
   title: MyString
   weekday: MyString
-  start: 2021-09-02 18:13:26
-  end: 2021-09-02 18:13:26
+  start: 2021-09-02 18:31:07
+  end: 2021-09-02 18:31:07
+  coach: two
