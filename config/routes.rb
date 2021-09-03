@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :schedules do
     resources :appointments
   end
@@ -10,5 +11,5 @@ Rails.application.routes.draw do
   namespace :coach do
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: "schedules#index"
+  root to: "coaches#index"
 end

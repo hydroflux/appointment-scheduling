@@ -1,4 +1,5 @@
 class CoachesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_coach, only: %i[ show edit update destroy ]
 
   # GET /coaches or /coaches.json
