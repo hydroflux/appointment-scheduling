@@ -1,0 +1,37 @@
+<h1>Listing appointments</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Duration</th>
+    <th>Description</th>
+    <th>User</th>
+    <th>Coach</th>
+    <th>Schedule</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @appointments.each do |appointment| %>
+  <tr>
+    <td><%= appointment.title %></td>
+    <td><%= appointment.start %></td>
+    <td><%= appointment.end %></td>
+    <td><%= appointment.duration %></td>
+    <td><%= appointment.description %></td>
+    <td><%= appointment.user %></td>
+    <td><%= appointment.coach %></td>
+    <td><%= appointment.schedule %></td>
+    <td><%= link_to 'Show', [appointment.schedule, appointment] %></td>
+    <td><%= link_to 'Edit', edit_schedule_appointment_path(appointment.schedule, appointment) %></td>
+    <td><%= link_to 'Destroy', [appointment.schedule, appointment], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Appointment', new_schedule_appointment_path(params[:schedule_id]) %>

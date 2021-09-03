@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  start: 2021-09-02 18:14:13
+  end: 2021-09-02 18:14:13
+  duration: 1
+  description: MyText
+  user: one
+  coach: one
+  schedule: one
+
+two:
+  title: MyString
+  start: 2021-09-02 18:14:13
+  end: 2021-09-02 18:14:13
+  duration: 1
+  description: MyText
+  user: two
+  coach: two
+  schedule: two

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @schedule.title %>
+</p>
+
+<p>
+  <b>Weekday:</b>
+  <%= @schedule.weekday %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%= @schedule.start %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%= @schedule.end %>
+</p>
+
+
+<%= link_to 'Edit', edit_coach_schedule_path(@schedule.coach, @schedule) %> |
+<%= link_to 'Back', coach_schedules_path(@schedule.coach) %>
